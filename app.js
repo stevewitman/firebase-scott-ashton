@@ -1,4 +1,7 @@
-angular.module('rtfmApp', ['ngRoute'])
+angular.module('rtfmApp', ['ngRoute', 'firebase'])
+.constant('fb', {
+  url: 'https://ang-firebase-tut.firebaseio.com'
+})
 .config(function($routeProvider){
         $routeProvider.
             when('/login', {

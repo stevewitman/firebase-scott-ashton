@@ -1,0 +1,28 @@
+{
+    "threads": [
+        {
+            "title": "A new thread!",
+            "username": "Scott",
+            "comments": [
+                {
+                    "text": "This is the best title I have ever seen for a thread",
+                    "username": "Phil"
+                },
+                {
+                    "text": "I know right?",
+                    "username": "Joe Somebody"
+                }
+            ]
+        },
+        {
+            "title": "Another thread",
+            "username": "Joe Somebody",
+            "comments": []
+        },
+        {
+            "title": "Yet another thread",
+            "username": "Phil",
+            "comments": []
+        }
+    ]
+}

@@ -3,12 +3,12 @@ angular.module('rtfmApp')
     var threadId = parseInt($routeParams.threadId);
 
     $scope.newComment = '';
-    $scope.thread = threadService.getThread(threadId);
+    $scope.thread = threadService.getThread(threadId)
 
-    $scope.addComment= function(){ 
+    $scope.addComment= function(){
         if(!$scope.newComment){
             return false; //Don't do anything if the text box is empty
-        }       
+        }
 
         var currentUser = userService.getLoggedInUser();
 
@@ -18,7 +18,7 @@ angular.module('rtfmApp')
         };
 
         $scope.thread.comments.push(newComment);
-    
+
         $scope.newComment = ''; //Clear the input box
     }
 
