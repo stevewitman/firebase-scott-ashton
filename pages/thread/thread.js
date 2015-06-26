@@ -3,9 +3,11 @@ angular.module('rtfmApp')
     var threadId = parseInt($routeParams.threadId);
 
     $scope.newComment = '';
-    $scope.thread = threadService.getThread(threadId)
+    var thread = threadService.getThread(threadId)
 
-    $scope.addComment= function(){
+    thread.$bindTo($scope, 'thread') // creates $scope.thread with 3-way binding
+
+    $scope.addComment= function(fb){
         if(!$scope.newComment){
             return false; //Don't do anything if the text box is empty
         }
@@ -16,8 +18,10 @@ angular.module('rtfmApp')
             text: $scope.newComment,
             username: currentUser.name
         };
-
-        $scope.thread.comments.push(newComment);
+console.log('here')
+console.log(fb)
+console.log('here2')
+        $scope.threads.comments.push(newComment);
 
         $scope.newComment = ''; //Clear the input box
     }
